@@ -1,7 +1,7 @@
 const fs = require('fs')
 
-let inspectDir = "/Users/kawashimakeiji/develop";
-let exportTo = "";
+let inspectDir = process.argv[2]// "/Users/kawashimakeiji/develop";
+let exportTo = process.argv[3];
 
 fs.readdir(inspectDir, {withFileTypes: true}, (err, datas) => {
     datas.forEach(data => {
